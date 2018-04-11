@@ -16,7 +16,7 @@ tags["VBD"] = "verb of past tense"
 tags["IN"] =  "preposition"
 
 # read in data
-data = json.load(open('../data/sample.json'))
+data = json.load(open('../../data/sample.json'))
 
 # extract all text
 docs = []
