@@ -28,11 +28,11 @@ for match_id, start, end in matches:
     print(string_id)
     print(span)
 
-for token in doc:
-    print("'",token.text,"' is a ", token.tag_)
+# for token in doc:
+#    print("'",token.text,"' is a ", token.tag_)
 
 
-print("would you like to see a dank chart? (y/n)")
+print("would you like to see a dank dep. chart? (y/n)")
 choice = str(input())
 if choice == "y":
 	# display at localhost:5000
