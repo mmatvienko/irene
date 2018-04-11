@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 import spacy
-import collection
+from collection import Collection
 
 # have core_parser (takes raw text)
 # JSON, CSV, etc will all be subclasses of core_parser
@@ -11,3 +11,6 @@ class Core_Parser():
 	def __init__(self, file):
 		self.file = file
 		pass
+	def get_collection(self):
+		return Collection()
+		

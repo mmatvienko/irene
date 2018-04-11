@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from parser import Core_Parser
-import collection
+from collection import Collection
 
 class Query_Engine:
 	def __init__(self, file):
@@ -9,6 +9,7 @@ class Query_Engine:
 		self.data = []
 		self.file = file
 		parser = Core_Parser(file)
+		self.collection = parser.get_collection()
 		
 	def search_corp(self, query):
 		# probably best if a generator is returned
