@@ -5,7 +5,11 @@ from query_engine import Query_Engine
 print("file name: ")
 file = str(input())
 
-qe = Query_Engine(file)
+qe = None
+
+if file == ''
+	qe = Query_Engine()
+	else: qe = Query_Engine(file)
 
 print("search for: ")
 search_term = str(input())

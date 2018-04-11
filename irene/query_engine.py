@@ -4,7 +4,7 @@ from parser import Core_Parser
 from collection import Collection
 
 class Query_Engine:
-	def __init__(self, file):
+	def __init__(self, file='../data/sample.json'):
 		# random var for now
 		self.data = []
 		self.file = file
