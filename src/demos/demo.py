@@ -21,32 +21,18 @@ data = json.load(open('../../data/sample.json'))
 # extract all text
 docs = []
 for complaint in data["Results"]:
-	docs.append(nlp(str(complaint["Summary"]).lower()))
+	lower_case = str(complaint["Summary"]).lower()
+	print(lower_case)
+	docs.append( nlp( lower_case ) )
 
 matcher = Matcher(nlp.vocab)
-pattern = [{'TAG': 'DT'},{'TAG': 'JJ'},{'TAG': 'NN'}]
+pattern = [{'ORTH': 'reasonable'}]
 # change pattern to have specfic
-matcher.add('pronoun verb', None, pattern)
-
-matches = []
-for doc in docs:
-	matches.append(matcher(doc))
-
-for match in matches:
-	for match_id, start, end in match:
-	    string_id = nlp.vocab.strings[match_id]  # 'HelloWorld'
-	    span = doc[start:end]                    # the matched span
-	    print(span)
-
-# for token in doc:
-#    print("'",token.text,"' is a ", token.tag_)
-
-fox = nlp(u'the quick brown fox, jumped over the lazy dog')
-
-print("would you like to see a dank dep. chart? (y/n)")
-choice = str(input())
-if choice == "y":
-	# display at localhost:5000
-	displacy.serve(fox, style='dep')
-else:
-	print("sucks to suck")
+matcher.add('annoying pattern', None, pattern)
+doc = docs[7]
+match = matcher(doc)
+for match_id, start, end in match:
+    string_id = nlp.vocab.strings[match_id]  # 'HelloWorld'
+    span = doc[start:end]                    # the matched span
+    print(span)
+    

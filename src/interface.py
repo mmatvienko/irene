@@ -7,9 +7,10 @@ file = str(input())
 
 qe = None
 
-if file == ''
-	qe = Query_Engine()
-	else: qe = Query_Engine(file)
+if file is '':
+    qe = Query_Engine()
+else:
+    qe = Query_Engine(file)
 
 print("search for: ")
 search_term = str(input())
