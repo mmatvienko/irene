@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 import spacy
 
-from parser import JSON_Parser
+from parser import JsonParser
 from collection import Collection
 from input import InputHandler
 
 
-class Query_Engine:
+class QueryEngine:
     def __init__(self, file='../data/sample.json'):
         # random var for now
         self.data = []
         self.file = file
-        parser = JSON_Parser(file)
+        parser = JsonParser(file)
         self.collection = parser.get_collection()
         self.handler = InputHandler()
 

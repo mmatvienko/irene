@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from query_engine import Query_Engine
+from query_engine import QueryEngine
 
 print("file name: ")
 file = str(input())
@@ -8,9 +8,9 @@ file = str(input())
 qe = None
 
 if file is '':
-    qe = Query_Engine()
+    qe = QueryEngine()
 else:
-    qe = Query_Engine(file)
+    qe = QueryEngine(file)
 
 print("search for: ")
 search_term = str(input())

@@ -10,7 +10,7 @@ import json
 # JSON, CSV, etc will all be subclasses of core_parser
 # allow for pre-parsing and serialization/pickling or something
 
-class Core_Parser():
+class CoreParser:
     def __init__(self, file):
         self.file = file
         pass
@@ -19,7 +19,7 @@ class Core_Parser():
         return Collection()
 
 
-class JSON_Parser():
+class JsonParser:
     def __init__(self, file):
         self.file = file
         data = json.load(open(file))
