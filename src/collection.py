@@ -21,7 +21,7 @@ class Collection:
     def match(self, query):
         # TODO rewrite to handle new query representation
         matcher = Matcher(nlp.vocab)
-        pattern = [{'ORTH': query}]
+        pattern = [{'ORTH': str(query)}]
         matcher.add('annoying pattern', None, pattern)
         match = matcher(self.doc)
         total_span = ""
