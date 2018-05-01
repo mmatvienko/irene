@@ -8,7 +8,7 @@ class Query():
         pass
 
 
-class Input_Handler():
+class InputHandler():
     def __init__(self):
         pass
 
