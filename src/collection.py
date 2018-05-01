@@ -16,7 +16,8 @@ class Collection:
     def get_doc(self):
         return self.doc
 
-    def query(self, query):
+    def match(self, query):
+		#TODO rewrite to handle new query representation
         matcher = Matcher(nlp.vocab)
         pattern = [{'ORTH': query}]
         matcher.add('annoying pattern', None, pattern)
