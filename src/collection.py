@@ -2,11 +2,13 @@
 
 from spacy.matcher import Matcher
 import en_core_web_sm
+
 # make this a global var?
 nlp = en_core_web_sm.load()
 
+
 class Collection:
-    def __init__(self, doc = [], data = None):
+    def __init__(self, doc=[], data=None):
         self.doc = doc
         self.data = data
 
@@ -17,7 +19,7 @@ class Collection:
         return self.doc
 
     def match(self, query):
-		#TODO rewrite to handle new query representation
+        # TODO rewrite to handle new query representation
         matcher = Matcher(nlp.vocab)
         pattern = [{'ORTH': query}]
         matcher.add('annoying pattern', None, pattern)

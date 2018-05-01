@@ -4,12 +4,13 @@
 # by the matcher in collection.py
 
 class Query():
-	def __init__(self):
-		pass
+    def __init__(self):
+        pass
+
 
 class Input_Handler():
-	def __init__(self):
-		pass
+    def __init__(self):
+        pass
 
-	def process_query(self, query):
-		pass
+    def process_query(self, query):
+        pass
